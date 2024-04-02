@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Output</title>
+    </head>
+
+    <body>
+        <h1 id="myHeading1">JavaScript Output</h1>
+
+        <button id="myBtn" >Alert</button>
+    </body>
+
+    <script>
+
+        
+        let msg = "Welcome"; 
+
+        // Output using innerHTML
+        document.getElementById('myHeading1').innerHTML = "I am from Javascript output";
+        
+        // Output using write function
+        document.write('<h2>Hi i a para from javascript</h2>');
+        
+        // Output using window 
+        document.getElementById('myBtn').onclick = () => {
+            msg = 'Welcome all';
+            window.alert('Hi, Welcome all, ' + msg);
+        };
+
+        // Output using console
+        console.log("I am in console" + msg);
+
+    </script>
+</html>

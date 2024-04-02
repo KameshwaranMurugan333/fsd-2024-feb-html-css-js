@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="container">
+        <p>I am para 1</p>
+    </div>
+
+    <button onclick="removeChild()">Remove Para</button>
+</body>
+
+<script>
+    var myh1element = document.createElement('h1');
+    myh1element.id = "heading1";
+    myh1element.innerHTML = "I am from JS";
+
+    // document.body.appendChild(myh1element);
+
+    document.getElementById("container").appendChild(myh1element);
+
+    function removeChild() {
+        document.getElementById("container").remove(myh1element);
+        // var containerEle = document.getElementById('container');
+        // document.removeChild(containerEle);
+    }
+</script>
+
+</html>

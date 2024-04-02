@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>I am using the JavaScript</h1>
+
+    <p id="myPara"></p>
+
+    <button onclick="document.getElementById('myPara').innerText = 'Submited'">Submit</button>
+
+    <button onclick="submitFunction()">Submit with Function</button>
+
+    <button id="myBtn">My Button</button>
+</body>
+
+<script>
+    document.getElementById('myPara').innerText = 'I am a paragraph'
+
+    document.getElementById('myPara').style.color = 'red';
+
+    function submitFunction() {
+        document.getElementById('myPara').innerText = 'Submitted via Function';
+    }
+
+    document.getElementById('myBtn').onclick = () => {
+        document.getElementById('myPara').innerText = 'My Button Clicked';
+    }
+</script>
+
+</html>
