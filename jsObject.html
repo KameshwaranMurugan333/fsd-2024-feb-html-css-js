@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Objects</title>
+</head>
+
+<body>
+    <h1>JS Objects</h1>
+</body>
+
+<script>
+    let studentFirstName = "Kamesh";
+    let studentLastName = "waran";
+    let studentMark = 460;
+    let studentRollNo = 7;
+
+    // Object Creation
+    const student = {
+        firstName: "Kamesh",
+        lastName: "waran",
+        mark: 460,
+        rollNo: 7
+    };
+
+    // Object Access
+    console.log("Firstname: ", student.firstName);
+
+    // Object Manipulation
+    console.log('Mark:', student.mark)
+    student.mark = 480;
+    console.log('Mark:', student.mark)
+
+    // Adding new key to object
+    console.log('Gender:', student.gender)
+    student.gender = "Male";
+    console.log('Gender:', student.gender)
+
+    // Deleting a key from object
+    console.log('Roll NO:', student.rollNo)
+    delete student.rollNo;
+    console.log('Roll NO:', student.rollNo)
+</script>
+
+</html>
