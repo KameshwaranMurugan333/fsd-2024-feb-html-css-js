@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>String Methods</h1>
+    </body>
+
+    <script>
+        let firstName = "Kamesh";
+        let lastName = "waran";
+
+        let fullName = "Mr." + firstName + lastName;
+
+        fullName = `Mr. ${firstName} ${lastName}`;
+        document.write(fullName);
+
+        document.write("<br> Length: " +fullName.length);
+        document.write("<br> Chart At(5):" +fullName.charAt(5));
+        document.write("<br> Chart At(5):" +fullName[5]);
+        document.write("<br> Firstname:" +fullName.slice(4, 10));
+        document.write("<br> Uppercase:" +fullName.toUpperCase());
+        document.write("<br> Lowercase:" +fullName.toLowerCase());
+        document.write("<br> With age:" +fullName.concat(" ", "(27)"));
+    </script>
+</html>

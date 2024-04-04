@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body onload="alert('I am loaded')">
+        <button onclick="alert('I am clicked')">Click Me</button>
+
+        <input id="name" placeholder="Name" type="text" onchange="onInputChange()" />
+    </body>
+
+    <script>
+        function onInputChange() {
+            alert("I have changed");
+            alert(document.getElementById("name").value)
+        }
+    </script>
+</html>
