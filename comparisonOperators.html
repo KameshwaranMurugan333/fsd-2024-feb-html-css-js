@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Comparison Operator</h1>
+</body>
+
+<script>
+    const students = [
+        { name: "Vijay", gender: "Male", assignment: 90, mcq: 70 },
+        { name: "Harini", gender: "Female", assignment: 100, mcq: 90 },
+        { name: "Hariharan", gender: "Male", assignment: 30, mcq: 50 },
+        { name: "Hariparas", gender: "Male", assignment: 0, mcq: 80 },
+        { name: "Swathi", gender: "Male", assignment: 85, mcq: 45 },
+        { name: "Dinesh", gender: "Male", assignment: 45, mcq: 30 },
+    ];
+
+    const disctinctionStuds = students.filter(function (value, index, array) {
+        return value.assignment <= 100 && value.assignment >= 80
+    })
+
+    const disctinctionStuds2 = students.filter(function (value, index, array) {
+        return value.assignment >= 80 || value.mcq >= 50
+    })
+    
+    console.log('disctinctionStuds:', disctinctionStuds);
+    console.log('disctinctionStuds2:', disctinctionStuds2)
+</script>
+
+</html>

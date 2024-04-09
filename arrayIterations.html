@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Array Iterations</h1>
+</body>
+
+<script>
+    const students = [
+        { name: "Vijay", gender: "Male" },
+        { name: "Harini", gender: "Female" },
+        { name: "Hariharan", gender: "Male" },
+        { name: "Hariparas", gender: "Male" }
+    ];
+
+    students.forEach(myFunction);
+
+    function myFunction(value, index, array) {
+        console.log("========================");
+        console.log('array:', array)
+        console.log('index:', index)
+        console.log('value:', value)
+        console.log("========================");
+        document.write("<br> Name: ", value.name);
+    };
+
+    const updatedStudents = students.map(function (value, index, array) {
+        value.completedAssignment = "6/6";
+        return value;
+    });
+    
+    console.log(updatedStudents);
+
+    const maleStudents = students.filter(function (value, index, array) {
+        return value.gender === "Male";
+    });
+    console.log('maleStudents:', maleStudents)
+
+    const femaleStudents = students.filter(function (value, index, array) {
+        return value.gender === "Female";
+    });
+    console.log('femaleStudents:', femaleStudents)
+
+</script>
+
+</html>

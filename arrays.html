@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Arrays</h1>
+    </body>
+
+    <script>
+        const languages = ["Tamil","Hindhi", "English"]; // index will always starts with '0'
+
+        // Get a element from an array using the index of the element
+        document.write(languages[0]);
+        document.write("<br>");
+        document.write(languages[1]);
+        document.write("<br>");
+        document.write(languages[2]);
+
+        // Update a element in an array using the index of the element
+        languages[0] = "Thamizh";
+
+        document.write("<br>");
+        document.write(languages[0]);
+
+        // Delete a element in an array using the index of the element
+        languages.splice(1,1);
+        // delete languages[1];
+        console.log(languages);
+        
+        // Add a new item into an array
+        languages.push("Hindhi");
+        languages.push("Telugu");
+        languages.push("Malayalam");
+
+        languages[5] = "Marathi"; // We exact to insert
+        console.log(languages);
+
+        // Join Method
+        console.log("Join", languages.join("-"));
+    </script>
+</html>
