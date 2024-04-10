@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>For Loop</h1>
+    <ol id="myCars"></ol>
+</body>
+
+<script>
+    let cars = ['BMW', 'Ford', 'MG', 'Swift', 'Maruthi', 'Tata'];
+
+    // 1. Initialization
+    // 2. Condition Checking
+    // 3. Execution of code block
+    // 4. Incrementation of looping variable
+    // 5. Condition Checking
+    // 6. If condition is true then execute the code block and continue step 4,5
+    // till the condition is false.
+    for (let i = 0; i < cars.length; i++) {
+        let car = document.createElement('li');
+        car.innerText = cars[i];
+        document.getElementById('myCars').appendChild(car);
+
+        // We can break the loop using break statement 
+        // if(i === 3){
+        //     break;
+        // }
+    }
+
+    /* 
+    Iteration 1:
+     i = 0;
+     i < cars.length - 0 < 6 - true;
+     code block runs
+     i++ - i = 1
+     i < cars.length - 1 < 6 - true;
+     code block runs
+     i++ - i = 2
+     i < cars.length - 2 < 6 - true;
+     code block
+     ..
+     ..
+     ..
+     i++ - i = 6
+     i < cars.length - 6 < 6 - false;
+     execution stops
+    */
+</script>
+
+</html>

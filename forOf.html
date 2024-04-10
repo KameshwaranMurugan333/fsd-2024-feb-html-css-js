@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>For Of Loop</h1>
+    <ol id="myCars"></ol>
+</body>
+
+<script>
+    let cars = ['BMW', 'Ford', 'MG', 'Swift', 'Maruthi', 'Tata'];
+   
+    for (let car of cars) {
+        let carEle = document.createElement('li');
+        carEle.innerText = car;
+        document.getElementById('myCars').appendChild(carEle);
+    }
+</script>
+
+</html>

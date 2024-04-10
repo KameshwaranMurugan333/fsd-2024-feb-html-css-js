@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Enter player jercy number</h1>
+    <input id="myInput" type="number" />
+    <p id="result"></p>
+</body>
+
+<script>
+    
+    document.getElementById('myInput').onchange = function (e) {
+        let input = document.getElementById('myInput').value;
+        input = parseInt(input);
+
+        let result = '';
+
+        switch(input){
+            case 3:
+                result = 'Suresh Raina';
+                break;
+            case 7:
+                result = 'Dhoni';
+                break;
+            case 10:
+                result = 'Tendulkar';
+                break;
+            default:
+                result = 'Player Unknown';
+                break;
+        }
+
+        document.getElementById('result').innerText = result;
+    }
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Do While Loop</h1>
+    <ol id="myCars"></ol>
+</body>
+
+<script>
+    let cars = ['BMW', 'Ford', 'MG', 'Swift', 'Maruthi', 'Tata'];
+
+    let i = 0;
+
+    do {
+        let car = document.createElement('li');
+        car.innerText = cars[i];
+        document.getElementById('myCars').appendChild(car);
+
+        i = i + 1;
+    } while (i < cars.length);
+
+</script>
+
+</html>

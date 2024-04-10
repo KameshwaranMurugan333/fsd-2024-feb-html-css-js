@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Even or Odd</h1>
+    <input id="myInput" type="number" />
+    <p id="result"></p>
+</body>
+
+<script>
+    document.getElementById('myInput').onchange = function (e) {
+        let input = document.getElementById('myInput').value;
+        input = parseInt(input);
+
+        let reminder = input % 2;
+        let result = '';
+
+        if (reminder === 0) {
+            result = 'even number'
+        } else {
+            result = 'odd number'
+        }
+
+        if (input > 0) {
+            result += ' positive number';
+        } else if (input < 0) {
+            result += ' negative number';
+        } else {
+            result += ' zero'
+        }
+
+        document.getElementById('result').innerText = result;
+    }
+</script>
+
+</html>
