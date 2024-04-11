@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            margin-top: 16px;
+            border-collapse: collapse;
+        }
+
+        table,
+        tr,th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Mark Registry (using Maps)</h1>
+    <input id="name" />
+    <input id="mark" type="number" />
+    <button id="add">Add</button>
+
+    <table>
+        <thead>
+            <th>Sl.No</th>
+            <th>Name</th>
+            <th>Mark</th>
+        </thead>
+        <tbody id="studentTable">
+
+        </tbody>
+    </table>
+</body>
+
+<script>
+
+    const studentRegistry = new Map();
+
+    document.getElementById('add').onclick = function () {
+        // Getting enetered name and mark
+        let name = document.getElementById('name').value;
+        let mark = document.getElementById('mark').value;
+        mark = parseInt(mark);
+
+        console.log(typeof name);
+        console.log(typeof mark);
+
+        if(typeof mark === 'string'){
+            mark = parseInt(mark);
+        }
+
+        // Adding the entry to the Map
+        studentRegistry.set(name, mark);
+        console.log('studentRegistry:', studentRegistry);
+
+        // Empty the input box
+        document.getElementById('name').value = '';
+        document.getElementById('mark').value = '';
+
+        let slNo = 1;
+        document.getElementById('studentTable').innerHTML = ``;
+
+        // Looping the map and adding each entry has table row to the table
+        studentRegistry.forEach(function (value, key) {
+            let tableRow = document.createElement('tr');
+            tableRow.innerHTML = `
+                <td>${slNo}</td>
+                <td>${key}</td>
+                <td>${value}</td>
+            `;
+            document.getElementById('studentTable').appendChild(tableRow);
+            slNo++;
+        })
+    }
+</script>
+
+</html>

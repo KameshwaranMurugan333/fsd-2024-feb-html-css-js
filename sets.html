@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JS Sets</h1>
+    <input id="myInput" type="number" />
+    <button id="myBtn">Add</button>
+    <p id="para"></p>
+</body>
+
+<script>
+    const myInputs = new Set();
+    document.getElementById('myBtn').onclick = function () {
+        let input = document.getElementById('myInput').value;
+        myInputs.add(input);
+
+        console.log(myInputs);
+        let text = "";
+        for (const x of myInputs.values()) {
+            text += ","+x;
+        }
+        document.getElementById('para').innerText = text;
+    }
+</script>
+
+</html>
