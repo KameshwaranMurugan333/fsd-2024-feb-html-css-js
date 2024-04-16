@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Set Interval</title>
+    </head>
+
+    <body>
+        <h1>JS Set Interval</h1>
+
+        <p id="time"></p>
+    </body>
+
+    <script>
+        let timeout = 5;
+        let interval = null;
+        const alerMeAfter5Sec = () => {
+            timeout -= 1;
+            document.getElementById("time").innerText = timeout + " sec";
+
+            if(timeout === 0){
+                clearInterval(interval);
+            }
+        }
+
+        interval = setInterval(alerMeAfter5Sec, 1000);
+
+    </script>
+</html>

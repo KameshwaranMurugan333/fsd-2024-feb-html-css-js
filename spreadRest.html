@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Spread Operator and Rest Parameter</title>
+</head>
+
+<body>
+    <h1>JS Spread Operator and Rest Parameter</h1>
+</body>
+
+<script>
+    // Spreading Arrays
+    const maleStudents = [
+        { name: "Vijay" },
+        { name: "Hari" },
+    ];
+
+    const femaleStudents = [
+        { name: "Harini" },
+        { name: "Swathi" },
+        { name: "Aarthi" }
+    ];
+
+    const students = [
+        ...maleStudents,
+        ...femaleStudents,
+        { name: "KS" },
+        { name: "Dinesh" }
+    ];
+    console.log('students:', students);
+
+    // Rest Parameter
+    const sum = (a, b, ...nos) => {
+
+        let total = a + b;
+        for (let i = 0; i < nos.length; i++) {
+            const no = nos[i];
+            total += no;
+        }
+        return total;
+    };
+
+    console.log("Sum:", sum(1, 3, 4, 5, 7, 8, 10));
+
+    // Spreading Objects
+    const htmlSyllabus = {
+        title: "Headings",
+        tasks: "5/10"
+    };
+
+    const htmlSyllabusDetails = {
+        finishDate: "Feb 2",
+        startDate: "Jan 2"
+    };
+
+    const html = {
+        ...htmlSyllabus,
+        ...htmlSyllabusDetails
+    };
+    console.log('html:', html);
+
+
+    // Object.values() and Object.keys()
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+        gender: "Male"
+    };
+
+    let text = Object.values(person);
+    let keys = Object.keys(person);
+    console.log('text:', text)
+    console.log('keys:', keys)
+
+    keys.forEach(key => {
+        document.write(person[key]);
+    });
+
+    // Object Destructuring 
+    const { firstName, lastName, age, eyeColor, gender } = person;
+    console.log('firstName:', firstName)
+    console.log('lastName:', lastName)
+    console.log('age:', age)
+    console.log('eyeColor:', eyeColor)
+    console.log('gender:', gender)
+
+
+</script>
+
+</html>
