@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Modules</title>
+</head>
+
+<body>
+    <h1>JS Modules</h1>
+</body>
+
+<script type="module">
+    import { welcomeMessage } from "./messeages.js";
+    import buildMessage from "./messeages.js";
+
+    console.log(welcomeMessage);
+
+    console.log(buildMessage(welcomeMessage));
+</script>
+
+</html>

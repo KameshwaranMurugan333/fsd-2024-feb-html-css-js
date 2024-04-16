@@ -8,8 +8,8 @@
 </body>
 
 <script>
-    document.getElementById('myInput').onchange = function (e) {
-        let input = document.getElementById('myInput').value;
+    document.getElementById('myInput').onchange = function () {
+        let input = this.value;
         input = parseInt(input);
 
         let reminder = input % 2;

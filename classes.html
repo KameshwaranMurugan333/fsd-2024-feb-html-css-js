@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Classes</title>
+</head>
+
+<body>
+    <h1>JS Classes</h1>
+</body>
+
+<script>
+
+    // 1. Create a class using the "class" keyword
+    class Students {
+        // 2. Define the constructor
+        constructor(students) {
+            // 3. Class Variable
+            this.students = students;
+        }
+
+        // 4. Class Methods/Functions
+        getFemaleStudents() {
+            return this.students.filter((student) => {
+               return student.gender === 'Female'
+            });
+        }
+
+        getNoOfStudents() {
+            return this.students.length;
+        }
+    };
+
+
+    const students = [
+        { name: "Vijay", gender: "Male", assignment: 90, mcq: 70 },
+        { name: "Harini", gender: "Female", assignment: 100, mcq: 90 },
+        { name: "Hariharan", gender: "Male", assignment: 30, mcq: 50 },
+        { name: "Hariparas", gender: "Male", assignment: 0, mcq: 80 },
+        { name: "Swathi", gender: "Male", assignment: 85, mcq: 45 },
+        { name: "Dinesh", gender: "Male", assignment: 45, mcq: 30 },
+    ];
+
+    // 5. Creating class object
+    const reactJSStudents = new Students(students);
+
+    // 6. Access class methods and class variables
+    console.log(reactJSStudents.students);
+    console.log(reactJSStudents.getFemaleStudents());
+    console.log(reactJSStudents.getNoOfStudents());
+
+</script>
+
+</html>
