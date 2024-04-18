@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage</title>
+    </head>
+
+    <body>
+        <h1>Local Storage</h1>
+        <input id="myInput" placeholder="Enter any value" />
+        <button id="saveBtn">Save</button>
+        <button id="getBtn">Get</button>
+        <button id="deleteBtn">Delete</button>
+        <button id="clearBtn">Clear</button>
+    </body>
+
+    <script>
+        document.getElementById('saveBtn').onclick = () => {
+            let input = document.getElementById('myInput').value;
+
+            // 1. To add or edit we need to use setItem function
+            localStorage.setItem('myInput',input);
+
+            document.getElementById('myInput').value = '';
+        }
+
+        document.getElementById('getBtn').onclick = () => {
+
+            // 2. To get a saved item from the local storage we need to use getItem
+            let input = localStorage.getItem('myInput');
+
+            document.getElementById('myInput').value = input;
+        }
+
+        document.getElementById('deleteBtn').onclick = () => {
+
+            // 3. To remove a  saved item from the local storage we need to use removeItem
+            localStorage.removeItem('myInput');
+
+            document.getElementById('myInput').value = '';
+        }
+
+        document.getElementById('clearBtn').onclick = () => {
+
+            // 4. To clear the local storage we need to use clear function
+            localStorage.clear();
+        }
+    </script>
+</html>

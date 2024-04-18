@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session Storage</title>
+    </head>
+
+    <body>
+        <h1>Session Storage</h1>
+        <input id="myInput" placeholder="Enter any value" />
+        <button id="saveBtn">Save</button>
+        <button id="getBtn">Get</button>
+        <button id="deleteBtn">Delete</button>
+        <button id="clearBtn">Clear</button>
+    </body>
+
+    <script>
+        document.getElementById('saveBtn').onclick = () => {
+            let input = document.getElementById('myInput').value;
+
+            // 1. To add or edit we need to use setItem function
+            sessionStorage.setItem('myInput',input);
+
+            document.getElementById('myInput').value = '';
+        }
+
+        document.getElementById('getBtn').onclick = () => {
+
+            // 2. To get a saved item from the session storage we need to use getItem
+            let input = sessionStorage.getItem('myInput');
+
+            document.getElementById('myInput').value = input;
+        }
+
+        document.getElementById('deleteBtn').onclick = () => {
+
+            // 3. To remove a  saved item from the session storage we need to use removeItem
+            sessionStorage.removeItem('myInput');
+
+            document.getElementById('myInput').value = '';
+        }
+
+        document.getElementById('clearBtn').onclick = () => {
+
+            // 4. To clear the session storage we need to use clear function
+            sessionStorage.clear();
+        }
+    </script>
+</html>
