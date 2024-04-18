@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Location Object</title>
+</head>
+
+<body>
+    <h1>Location Object</h1>
+
+    <button id="reload">Reload</button>
+    <button id="navigate">Navigate to promises</button>
+    <br>
+    <br>
+</body>
+
+<script>
+    let href = window.location.href;
+    document.write('href: ' + href);
+
+    document.write('<br>protocol: ' + window.location.protocol);
+    let hostName = window.location.hostname;
+    document.write('<br>hostname: ' + hostName);
+    document.write('<br>port: ' + window.location.port);
+    document.write('<br>pathname: ' + window.location.pathname);
+
+    document.getElementById("reload").onclick = () =>{ 
+        window.location.reload();
+    };
+
+    document.getElementById("navigate").onclick = () => {
+        window.location.replace('./promises.html')
+        // window.open('./promises.html');
+    }
+</script>
+
+</html>

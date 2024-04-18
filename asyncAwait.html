@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>asyc/await</title>
+</head>
+
+<body>
+    <h1>asyc/await</h1>
+</body>
+
+<script>
+    const function1 = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("I am from function 1");
+                resolve("I am rejecting due to some error");
+            }, 3000);
+        })
+    };
+
+    const function2 = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("I am from function 2");
+                resolve();
+            }, 1000);
+        })
+    };
+
+    const function3 = () => {
+        setTimeout(() => {
+            console.log("I am from function 3");
+        }, 4000);
+    };
+
+    const callFunctions = async () => {
+        await function1();
+        await function2();
+        function3();
+    };
+
+    callFunctions();
+</script>
+
+</html>

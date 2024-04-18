@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Click to close this window</h1>
+        <button id="close">Close</button>
+    </body>
+
+    <script>
+        document.getElementById("close").onclick = () => {
+            if(confirm('Are you sure, do you want to close?')){
+                window.close();
+            }else{
+                alert('Thank you');
+            }
+        }
+    </script>
+</html>
